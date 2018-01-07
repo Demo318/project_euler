@@ -2,16 +2,6 @@
 #
 # What is the largest prime factor of the number 600851475143 ?
 
-# Function to test if a number is prime.
-def test_prime(num):
-    # Number too small not to be prime.
-    if abs(num) < 4:
-        return True
-    for i in range(2, int(num)):
-        if num % i == 0:
-            return False
-    return True
-
 # Ask for user input
 print("Find the largest prime factor of a given number.")
 user_num = float(input("Please enter a number: "))
@@ -29,11 +19,6 @@ while (user_num / cur_factor) != 1:
         cur_factor += 1
 factors.append(int(user_num))
 
-
-
-prime_factors = list(filter(test_prime, factors))
-
 print(factors)
-print(prime_factors)
 
-print('Largest prime factor: ' str(prime_factors[-1]))
+print('Largest prime factor: ' + str(factors[-1]))
